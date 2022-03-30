@@ -32,6 +32,9 @@
     // the location of the main markdown file we display
     $.md.mainHref = '';
 
+    // whether mainHref is used as default or not
+    $.md.mainDefault = false;
+
     // the in-page anchor that is specified after the !
     $.md.inPageAnchor = '';
 

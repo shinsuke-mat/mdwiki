@@ -506,7 +506,9 @@
         if (window.location.hash.startsWith('#!')) {
             href = window.location.hash.substring(2);
         } else {
-            href = window.location.hash.substring(1);
+            // href = window.location.hash.substring(1);
+            href = "index.md" + window.location.hash; // implicitly use #!index.md as default
+            $.md.mainDefault = true;
         }
         href = decodeURIComponent(href);
 
@@ -534,8 +536,9 @@
                 ) {
             newHashString = currentHashString + 'index.md';
         }
-        if (newHashString)
-            window.location.hash = newHashString;
+        // do not change location to implicit #!index.md
+        //if (newHashString)
+        //    window.location.hash = newHashString;
     }
 
     $(document).ready(function () {

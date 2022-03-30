@@ -78,6 +78,9 @@
     $.md.util.getInpageAnchorHref = function (text, href) {
         href = href || $.md.mainHref;
         var subhash = $.md.util.getInpageAnchorText(text);
+        if ($.md.mainDefault) {
+            return '#' + subhash;
+        }
         return '#!' + href + '#' + subhash;
     };
 

@@ -81,7 +81,7 @@
         navbar +=       '<span class="icon-bar"></span>';
         navbar +=       '<span class="icon-bar"></span>';
         navbar +=     '</button>';
-        navbar +=     '<a class="navbar-brand" href="#"></a>';
+        navbar +=     '<a class="navbar-brand" href=""></a>';
         navbar +=   '</div>';
 
         navbar +=   '<div class="collapse navbar-collapse navbar-ex1-collapse">';
@@ -373,7 +373,8 @@
 		var filename = window.location.hash;
 
 		if (filename.length === 0) {
-            filename = '#!index.md';
+            //filename = '#!index.md';
+            filename = './';
         }
 		var selector = 'li:has(a[href="' + filename + '"])';
 		$('#md-menu').find (selector).addClass ('active');
